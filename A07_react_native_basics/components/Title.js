@@ -1,5 +1,9 @@
-import { View, Text, StyleSheet } from 'react-native';
-import { BOOK_TITLE, AUTHOR } from '../constants';
+import { View, Text, StyleSheet } from "react-native";
+import { BOOK_TITLE, AUTHOR } from "../constants";
+
+function shout(text) {
+    return text.toUpperCase();
+}
 
 function Title() {
     return (
@@ -7,6 +11,7 @@ function Title() {
             <Text style={styles.heading}>{BOOK_TITLE}</Text>
             <Text>{`${BOOK_TITLE} by ${AUTHOR}`}</Text>
             <Text>Simple recipes, cooked simply.</Text>
+            <Text>{shout("welcome to the kitchen")}</Text>
         </View>
     );
 }
